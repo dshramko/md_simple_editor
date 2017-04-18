@@ -29,20 +29,14 @@ module MdSimpleEditor
 
       def header_tags
         content_tag(:div, :class => 'btn-group') do
-          button_tag(type: 'button', class: "#{@md_builder.default_class} md_h1") do
-            content_tag(:strong, 'H1')
+          button_tag(type: 'button', class: "#{@md_builder.default_class} md_h2") do
+            content_tag(:strong, 'H2')
           end +
-              button_tag(type: 'button', class: "#{@md_builder.default_class} md_h2") do
-                content_tag(:strong, 'H2')
-              end +
-              button_tag(type: 'button', class: "#{@md_builder.default_class} md_h3") do
-                content_tag(:strong, 'H3')
-              end +
               button_tag(type: 'button', class: "#{@md_builder.default_class} md_h4") do
                 content_tag(:strong, 'H4')
               end +
-              button_tag(type: 'button', class: "#{@md_builder.default_class} md_h5") do
-                content_tag(:strong, 'H5')
+              button_tag(type: 'button', class: "#{@md_builder.default_class} md_h6") do
+                content_tag(:strong, 'H6')
               end
         end
       end

@@ -13,12 +13,12 @@ md_simple_editor = () ->
     if option.length != 0
       option = option[0].toString()
 
-      text = if option == 'md_h1'
-               "# Your Title here"
-            else if option == 'md_h3'
-               "### Your Title here"
-            else if option == 'md_h5'
-               "##### Your Title here"
+      text = if option == 'md_h2'
+               "## Your Title here"
+            else if option == 'md_h4'
+               "#### Your Title here"
+            else if option == 'md_h6'
+               "###### Your Title here"
             else if option == 'md_italic'
                "_Your italic text here_"
             else if option == 'md_bold'
@@ -94,8 +94,7 @@ insertAtCaret = (areaId, text) ->
 
 initializeEditor = ->
   md_simple_editor()
-  $(document).off 'turbolinks:load page:load ready', initializeEditor
   $('.preview_md').click ->
     preview()
 
-$(document).on 'turbolinks:load page:load ready', initializeEditor
+$(document).on 'turbolinks:load', initializeEditor

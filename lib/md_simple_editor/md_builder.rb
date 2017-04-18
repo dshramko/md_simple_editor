@@ -9,6 +9,6 @@ class MdBuilder
   end
 
   def default_class
-    "btn btn-outline-secondary btn-sm md-btn #{class_attr}"
+    "btn btn-outline-secondary md-btn #{class_attr}"
   end
 end
